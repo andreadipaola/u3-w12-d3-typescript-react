@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { IArticle } from "../interfaces/IArticle";
-
 import Article from "./Article";
 
 const Articles = () => {
@@ -25,7 +24,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="mt-10">
       <Row md={3} className="justify-content-center">
         {articles.map((article) => (
           <Col key={article.id}>
