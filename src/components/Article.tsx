@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 const Article = ({ article }: IArticlesProps) => {
   return (
     <Link to={"/article-details/" + article.id}>
-      <Card className="mb-3 text-dark">
+      <Card id="cardArticle" className="bg-custom-dark border-0 shadow">
         <Card.Img variant="top" src={article.image_url} />
-        <Card.Body>
-          <Card.Title className="text-truncate">{article.title}</Card.Title>
-          <Card.Text className="text-truncate">{article.summary}</Card.Text>
-          <Card.Title>{article.news_site}</Card.Title>
-          {/* <Card.Title>{article.published_at}</Card.Title>
-        <Card.Title>{article.updated_at}</Card.Title> */}
-          <Card.Title>{article.featured}</Card.Title>
-
-          {/* <Button variant="info">{article.featured}€</Button> */}
+        <Card.Body className="p-4">
+          {/* <Card.Text className="text-custom-darkgray mb-1">{article.published_at}</Card.Text>
+                  <Card.Text className="text-custom-darkgray mb-1">{article.updated_at}</Card.Text> */}
+          <Card.Title className="text-custom-white display-5 mb-4 text-truncate">{article.title}</Card.Title>
+          <div className="d-flex flex-column justify-content-between">
+            <Card.Text className="text-custom-darkgray">{article.summary}</Card.Text>
+            <Card.Text className="text-custom-darkgray mt-auto">{article.news_site}</Card.Text>
+            {/* <Card.Text className="text-custom-darkgray">{article.featured}</Card.Text> */}
+          </div>
         </Card.Body>
       </Card>
     </Link>

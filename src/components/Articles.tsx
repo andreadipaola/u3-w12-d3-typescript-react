@@ -12,7 +12,7 @@ const Articles = () => {
       const res = await fetch(URL);
       if (res.ok) {
         const data = await res.json();
-        setArticles(data.results);
+        setArticles(data.results.slice(0, 9));
       }
     } catch (error) {
       console.log(error);
@@ -24,10 +24,10 @@ const Articles = () => {
   }, []);
 
   return (
-    <Container className="mt-10">
-      <Row md={3} className="justify-content-center">
+    <Container className="mt-10 mb-10">
+      <Row md={3} className="justify-content-center gy-3">
         {articles.map((article) => (
-          <Col key={article.id}>
+          <Col key={article.id} className="">
             <Article article={article} />
           </Col>
         ))}

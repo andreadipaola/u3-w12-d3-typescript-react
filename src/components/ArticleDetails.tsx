@@ -29,11 +29,11 @@ const ArticleDetails = () => {
   return (
     <>
       {article ? (
-        <Container className="pt-20">
+        <Container className="d-flex justify-content-center align-items-center vh-100">
           <Row className="justify-content-center">
-            <Col md={6}>
-              <Card className="bg-custom-dark shadow rounded">
-                <Card.Img variant="top" src={article.image_url} />
+            <Col md={8} className="shadow-lg p-0 ">
+              <Card className="bg-custom-dark border-0">
+                <Card.Img className="border-0" variant="top" src={article.image_url} />
                 <Card.Body className="p-4">
                   {/* <Card.Text className="text-custom-darkgray mb-1">{article.published_at}</Card.Text>
                   <Card.Text className="text-custom-darkgray mb-1">{article.updated_at}</Card.Text> */}
